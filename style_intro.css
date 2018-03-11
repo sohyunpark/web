@@ -1,0 +1,83 @@
+/* 로그인, 회원가입 html StyleSheet  */
+/* 초기화 */
+@@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  font-family: '맑은 고딕';
+}
+a { text-decoration: none;}
+li { list-style: none;}
+a:focus, a:hover, button:hover,a:active, button:active {
+  background: #888;
+}
+input:focus, textarea:focus{
+  border: 1px solid blue;
+}
+/* 헤더 */
+#page-wrapper {
+  background: white;
+  width: 500px;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+.logo-img{
+  width: 26%;
+  float: left;
+}
+.master-title{
+  letter-spacing:4px;
+  text-align: center;
+}
+.check{
+  font-size: 9px;
+}
+/* 메인-공통 */
+.main-section{
+  margin-top: 30px;
+}
+table{
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+table > tbody > tr > td {
+  text-align: center;
+  width: 180px;
+}
+#submit{
+  margin: 15px 10px 10px 15px;
+  width: 150px;
+  position: relative;
+  left: 150px;
+  text-align: center;
+}
+#main-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+/* 로그인 메인 */
+.login-form{
+  margin-top: 40px;
+}
+/* 회원가입 메인 */
+#register-table {
+  width: 530px;
+}
+.register-email{
+  width: 100px;
+}
+.register-contract{
+  width: 400px;
+  height: 100px;
+}
+input[type=submit]{
+  border: 2px solid #A9E2F3;
+  border-radius: 3px;
+  background: #A9E2F3;
+}
+input[type=reset]{
+  border: 2px solid #F5A9BC;
+  border-radius: 3px;
+  background: #F5A9BC;
+}

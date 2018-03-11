@@ -1,55 +1,233 @@
+/* 게시글상세보기, 게시판글쓰기, 게시판목록, 나의회원정보 html StyleSheet */
 /* 초기화 */
 @@charset "UTF-8";
 *{
   margin: 0;
   padding: 0;
-  font-family: '맑은 고딕';
+  font-family: "Helvetica Neue","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",Dotum,"돋움",sans-serif;
 }
-a { text-decoration: none;}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:focus, a:hover, button:hover,a:active, button:active {
+  background: #888;
+}
+input:focus, textarea:focus{
+  border: 1px solid blue;
+}
 li { list-style: none;}
-/* 로그인.html / 구성하기  */
+/* 바디 - 공통 */
 #page-wrapper {
   background: white;
-  width: 500px;
-  margin: 80px auto;
+  width: 60%;
+  margin: auto;
   padding: 10px;
   border-radius: 5px;
 }
+/* 헤더 - 공통 */
+#topbar{
+  padding: 7px 0;
+}
+ul.loginbar-pull-right{
+  float: right;
+  font-size: 8px;
+}
+.loginbar-pull-right > li {
+  display: inline;
+  padding: 0 2px;
+}
+.devider{
+  margin: 0 9px 0 5px;
+  border-right: 1px solid #bbb;
+}
+#main-header{
+  border-bottom: 1px solid black;
+}
 .logo-img{
-  width: 26%;
-  height: 45px;
+  margin-left: 15px;
+  height: 50px;
   float: left;
 }
 .master-title{
-  position: relative;
+  text-align: center;
   letter-spacing:4px;
-  left: 60px;
 }
-.content {
-  overflow: hidden;
+.master-description{
+  float: right;
 }
-.main-section{
+/* 내비 - 공통 */
+#grid{
+  display: grid;
+  grid-auto-columns: 170px 1fr;
+}
+.menu-title{
+  width: 90px;
+  display: block;
+  line-height: 30px;
+  padding:5px 0 5px 0;
+}
+.menu-title:hover, .inner-menu-item:hover{
+  background: #687074;
+  color: white;
+}
+.inner-menu{
+  display: none;
+  position: absolute;
+  width: 110px;
+  line-height: 25px;
+  padding-left: 8px;
+  font-size: 12px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(5, 5, 5, 0.9);
+  z-index: 1000;
+}
+.inner-menu-item {
+  width: 100px;
+}
+.inner-menu-item > a {
+  display: block;
+  padding: 5px 13px;
+  border-right: 5px;
+  color: black;
+}
+.outer-menu-item:hover > .inner-menu {
+  display:block;
+}
+/* 메인 - 공통 */
+#content{
+  border-left: 1px solid black;
+  grid-column: 2;
+}
+.article-content-title{
+  margin-left: 15px;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+#article-top, #article-center{
+  margin : 30px 0 0 20px;
+}
+.article-content-time, .article-center-content{
+  text-align: center;
+}
+#paging{
+  font-size: 13px;
+  margin: 20px 0;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing:5px;
+}
+#button{
+  display: inline;
+  float: right;
+  height: 20px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 2px 2px;
+  margin: 10px 2px;
+}
+#button img{
+  margin-right: 4px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+/* 푸터-공통 */
+#main-footer{
   margin-top: 50px;
+  text-align: center;
 }
-.login-form{
-  margin-top: 40px;
+#main-footer ul li{
+  display: inline;
+  font-size: 12px;
 }
-table{
-  border-spacing: 10px;
+.copyrightbar{
+  padding-left: 0;
+}
+.copyright{
+  padding: 0;
+  font-size: 10px;
+  color: #7e7e7e;
+}
+/* 게시판 목록 */
+.article-title{
+  margin : 0 0 0 15px;
+  font-weight: bold;
+  float: left;
+}
+.article-time{
+  font-size: 14px;
+  color: #7d7d7d !important;
+  letter-spacing: -1px;
+  vertical-align: bottom;
+}
+.article-content-list-table{
+  width: 100%;
+  margin-top: 15px;
+  border-spacing: 8px;
   border-collapse: separate;
+  font-size: 13px;
+  font-weight: bold;
 }
-table > tbody > tr > td {
+#article-total-list{
+  margin:9px 0 10px 8px;
+}
+#article-total-list-html{
+  margin: 20px 20px;
+}
+/* 나의 회원정보 */
+#profile{
+  width: 60%;
+  margin-top: 30px;
+  display: inline;
+  left: 10px;
+}
+#profile th {
+  width: 120px;
+  padding: 5px 0 5px 20px;
+  color: #838382;
+  text-align: left !important;
+  font-weight: normal;
+}
+#profile td {
+  width: 400px;
+  padding: 5px 0 5px 20px;
   text-align: center;
-  width: 180px;
 }
-#submit{
-  margin: 15px 10px 10px 15px;
-  width: 150px;
+#profile >tbody > tr:last-child> td:last-child{
+  font-size: 10px;
+  font-weight: bold;
+}
+/* 게시글, 게시글 작성 */
+.movie{
+  margin-left: 10px;
+}
+.writebutton{
+  margin: 1px 0 0 2px;
+}
+.subject{
+  margin-left: 10px;
+  font-size: 13px;
+}
+.article-content-attach-item-list{
+  display: inline-block;
+  margin: 5px 10px;
+}
+.article-content-write{
+  margin: 15px 5px 3px 50px;
+}
+.box-input{
   position: relative;
-  left: 130px;
-  text-align: center;
+  left: 12px;
+  width: 300px;
 }
-#main-footer {
-  margin-top: 20px;
-  text-align: center;
+/* 반응형 - 공통 */
+@media screen and (max-width : 600px) {
+  #grid{
+    display: block;
+  }
+  #main-navigation{
+    border-right: none;
+  }
 }

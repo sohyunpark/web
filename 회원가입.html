@@ -5,7 +5,7 @@
     <meta name="keywords" content="회원가입">
     <meta name="description" content="gsitm 회원가입 페이지">
     <title>HTML교육 - 회원가입</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_intro.css">
   </head>
   <body>
     <div id="page-wrapper">
@@ -16,17 +16,21 @@
         </hgroup>
       </header>
       <div id="content">
+        <div id="titlearea">
+          <span><strong>&nbsp;기다리고 있었습니다.</strong></span>
+          <span class="check">식구가 되기 위한 호구조사에 성실히 임해주십시오.</span>
+        </div>
         <section id="main-section">
-          <form class="register-form">
+          <form class="register-form" method="post">
             <fieldset>
               <table id="register-table">
                 <tr>
                   <td><span class="register-name-title">이름</span></td>
-                  <td><input type="text" class="register-name" /></td>
+                  <td colspan="2"><input type="text" class="register-name" /></td>
                 </tr>
                 <tr>
                   <td><span class="register-gender-title">성별</span></td>
-                  <td>
+                  <td colspan="2">
                     <label for="man"> 남자 </label>
                     <input type="radio" class="register-gender-man" />
                     <label for="woman"> 여자 </label>
@@ -35,7 +39,7 @@
                 </tr>
                 <tr>
                   <td><span class="register-birth-title">생년월일</span></td>
-                  <td>
+                  <td colspan="2">
                     <select>
                       <option>1988</option>
                       <option>1989</option>
@@ -97,27 +101,101 @@
                 </tr>
                 <tr>
                   <td><span class="register-id-title">사번</span></td>
-                  <td><input type="text" class="register-id" /></td>
-                  <td><input class="register-id-check" type="submit" value="중복검사" /></td>
+                  <td colspan="2"><input type="text" class="register-id" /></td>
+                  <td><input class="register-id-check" type="submit" value="중복확인" /></td>
                 </tr>
                 <tr>
                   <td><span class="register-pw-title">비밀번호</span></td>
-                  <td><input type="text" class="register-pw" /></td>
+                  <td colspan="2"><input type="password" class="register-pw"/></td>
                 </tr>
                 <tr>
                   <td><span class="register-pwcheck-title">비밀번호 확인</span></td>
-                  <td><input type="text" class="register-pwcheck" /></td>
+                  <td colspan="2"><input type="password" class="register-pwcheck" /></td>
                 </tr>
                 <tr>
                   <td><span class="register-email-title">이메일</span></td>
-                  <td><input type="text" class="register-email" /></td>
-                  <td><input class="register-id-check" type="submit" value="중복검사" /></td>
+                  <td><input type="text" class="register-email" />&nbsp;@</td>
+                  <td>
+                    <select>
+                    <option>naver.com</option>
+                    <option>daum.net</option>
+                    <option>nate.com</option>
+                    <option>gmail.com</option>
+                    <option>hotmail.com</option>
+                    <option>yahoo.com</option>
+                    <option>empas.com</option>
+                    <option>korea.com</option>
+                  </select>
+                  </td>
+                  <td><input class="register-id-check" type="submit" value="중복확인" /></td>
+                </tr>
+                <tr>
+                  <td colspan="4"><span class="register-contract-title">개인(신용)정보제공ㆍ이용에 대한 동의</span></td>
+                </tr>
+                <tr>
+                  <td colspan="4"><textarea class="register-contract">귀행과의 근로계약 체결(채용) 절차와 관련하여 귀행이 본인의 개인(신용)정보를 수집ㆍ이용하거나 제3자에게 제공하고자 하는 경우에는 「개인정보 보호법」 제15조 제1항 제1호, 제17조 제1항 제1호, 제23조 제1호, 제24조 제1항 제1호,
+「신용정보의 이용 및 보호에 관한 법률」 제32조 제1항, 제33조 및 제34조, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」
+제22조 제1항, 제24조의 2 제1항에 따라 본인의
+동의를 얻어야 합니다. 이에 본인은 귀행이 아래의 내용과 같이 본인의 개인(신용)정보를 수집ㆍ이용 또는 제공하는 것에 동의합니다.
+
+1. 수집ㆍ이용에 관한 사항
+ 가. 수집 이용목적
+   (1) 근로계약 체결(채용) 절차의 진행 및 관리, 경력·자격 등 확인(조회 및 검증), 채용 여부의 결정
+   (2) 민원처리, 분쟁해결, 법령상 의무이행
+
+ 나. 수집 이용할 항목
+   (1) 필수적 정보 : (개인식별정보) 성명, 생년월일, 주소, 전자우편 주소, 전화번호 등 연락처, 보훈 및 장애 여부
+   (2) 선택적 정보 : 개인식별정보 외에 입사지원서 등에 제공한 정보
+     - 병역사항, 교육사항, 직무관련 경험사항, 직무관련 경험기술서, 우대 자격증 사항, 채용 시 우대사항, 자기소개사항
+
+ 다. 보유 이용기간
+   위 개인(신용)정보는 수집ㆍ이용에 관한 동의일로부터 [12]월 동안 위 이용 목적을 위하여 보유ㆍ
+   이용됩니다. 단, 위 기간 경과 또는 지원자가 근로계약 체결을 거절한 경우에는 민원처리, 분쟁 해결,
+   법령상 의무이행을 위하여 필요한 범위 내에서만 보유·이용됩니다.
+
+ 라. 동의를 거부할 권리 및 동의를 거부할 경우의 불이익
+   위 개인(신용)정보 중 필수적 정보의 수집·이용에 관한 동의는 채용 심사를 위하여 필수적이므로,
+   위 사항에 동의하셔야만 근로계약의 체결이 가능합니다. 위 개인(신용)정보 중 선택적 정보의
+   수집·이용에 관한 동의는 거부하실 수 있으며, 다만 동의하지 않으시는 경우 채용심사상의 불이익을
+   받으실 수 있습니다.
+
+2. 제공에 관한 사항
+ 가. 제공받는자 : 수탁업체 인크루트(주), 의료법인 하나로의료재단
+
+ 나. 제공받는 자의 이용 목적 :
+   위탁업체에 대한 제공 : 채용 절차의 진행 및 관리를 위한 위탁 업무의 수행
+     - 인크루트(주) : 채용 절차의 진행을 위한 시스템 운영
+     - 하나로의료재단 : 채용 적합여부 확인을 위한 건강검진
+
+ 다. 제공 할 개인(신용)정보의 항목
+     수탁업체에 대한 제공되는 개인(신용)정보의 항목
+     - 수집·이용에 동의한 정보 중 위탁업무 목적달성을 위해 필요한 정보에 한함
+        본 동의 이전에 수집된 개인(신용)정보도 포함됩니다
+
+ 라. 변경에 관한 사항
+   위 제공대상 업체, 이용목적, 제공대상 항목 세부적 내용은 채용 홈페이지에서 확인하실 수 있습니다.
+   당행은 위 사항의 변경이 있을 경우에는 위 홈페이지에 변경 내용을 게시합니다.
+
+ 마. 제공받은 자의 개인(신용)정보 보유·이용기간
+   위 개인(신용)정보는 제공된 날로부터 제공된 목적을 달성할 때까지 보유ㆍ이용됩니다.
+   단, 지원자가 근로계약 체결을 거절한 경우에는 민원처리, 분쟁 해결, 법령상 의무이행을
+   위하여 필요한 범위 내에서만 보유·이용됩니다
+
+ 바. 동의를 거부할 권리 및 동의를 거부할 경우의 불이익
+   위 개인(신용)정보의 제공에 관한 동의는 근로계약의 체결을 위하여 필수적이므로,
+   위 사항에 동의하셔야만 근로계약의 체결이 가능합니다  </textarea></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><span class="register-contract-check-title">이용약관에 동의하십니까?</span></td>
+                  <td>
+                    <label for="agree"> 동의함 </label>
+                    <input type="radio" class="register-contract-check" />
+                  </td>
                 </tr>
               </table>
-              <!-- 이용약관 추가하기 -->
               <div id="submit">
-              <input class="registercancel-submit" type="submit" value="가입취소" />
-              <input class="register-submit" type="submit" value="회원가입" />
+              <input class="registercancel-submit" type="reset" value="가입취소" />
+              <input class="register-submit" type="submit" value="회원가입" onClick="window.location.href='게시판목록.html'; return false;"/>
               </div>
             </fieldset>
           </form>

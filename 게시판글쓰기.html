@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML교육 - 게시판 글쓰기(후방주의)</title>
+    <meta name="keywords" content="게시글 글쓰기">
+    <meta name="description" content="gsitm 게시글 글쓰기 페이지">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <header id="main-header">
+        <div id="topbar">
+          <div class="container">
+            <ul class="loginbar-pull-right">
+              <li><a href="나의회원정보.html" class="username">박소현 님</a></li>
+              <li class="devider"></li>
+              <li><a href="#" class="username">설정</a></li>
+              <li class="devider"></li>
+              <li><a href="로그인.html" class="username">로그아웃</a></li>
+            </ul>
+          </div>
+        </div>
+        <hgroup>
+          <a href="게시판목록.html"><img class="logo-img" src="gsitm.jpg" /></a>
+          <h1 class="master-title"> <a href="게시판목록.html"> HTML 교육 </a> </h1>
+        </hgroup>
+      </header>
+      <div id="grid">
+        <nav id="main-navigation">
+          <div id="index">
+            <ul class="outer-menu">
+                <li class="outer-menu-item">
+                  <span class="menu-title">교육 과정</span>
+                  <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="html" onmouseover="this.innerText='괜찮아요'" onmouseout="this.innerText='HTML'">HTML</a></li>
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="CSS" onmouseover="this.innerText='해치지않아요'" onmouseout="this.innerText='CSS'">CSS</a></li>
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="JavaScript" onmouseover="this.innerText='어허 사양말고 넣어둬'" onmouseout="this.innerText='JavaScript'">JavaScript</a></li>
+                  </ul>
+                </li>
+                <li class="outer-menu-item">
+                  <span class="menu-title">게시판</span>
+                  <ul class="inner-menu">
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="notice" onmouseover="this.innerText='고객통신문'" onmouseout="this.innerText='NOTICE'">NOTICE</a></li>
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="questionanswer" onmouseover="this.innerText='질문받습니다'" onmouseout="this.innerText='ASK ME'">ASK ME</a></li>
+                    <li class="inner-menu-item"><a href="게시글상세보기.html" class="freeboard" onmouseover="this.innerText='놀랍도록 열정적인 후기'" onmouseout="this.innerText='REVIEW'">REVIEW</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </nav>
+        <div id="content">
+          <div id="article-top">
+            <h3 class="article-content-title">Review</h3>
+          </div>
+          <div id="article-content">
+            <div class="article-content-attach">
+              <ul class="subject">
+                <li>
+                  <label class="article-content-attach-item" for="boardcaategory">게시판</lebel>
+                    <div class="article-content-attach-item-list">
+                      <select name="menu">
+                        <option>NOTICE</option>
+                        <option>ASK ME</option>
+                        <option>REVIEW</option>
+                      </select>
+                    </div>
+                </li>
+                <li class="post-subject">
+                  <label class="article-content-attach-item" for="subject">제목</lebel>
+                    <div class="article-content-attach-item-list">
+                      <input type="text" name="subject" class="box-input"/>
+                    </div>
+                </li>
+                <li class="post-subject">
+                  <label class="article-content-attach-item" for="file">파일첨부</lebel>
+                    <div class="article-content-attach-item-list">
+                      <ul class="article-content-attach-db">
+                        <li><input type="file" name="file"/></a></li>
+                      </ul>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="article-content-write">
+              <textarea rows="20px" cols="70%" name="write-content"></textarea>
+            </div>
+          </div>
+          <div id="button">
+            <p class="writebutton">
+              <strong>
+                <a href="게시글상세보기.html">확인</a>
+              </strong>
+            </p>
+          </div>
+          <div id="button">
+            <p class="writebutton">
+              <strong>
+                <a href="게시글상세보기.html">미리보기</a>
+              </strong>
+            </p>
+          </div>
+          <div id="button">
+            <p class="writebutton">
+              <strong>
+                <a href="게시글상세보기.html">임시저장</a>
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer id="main-footer">
+        <div id="bottombar">
+          <div class="container">
+            <ul class="copyrightbar">
+              <li><a href="#">이용약관</a></li>
+              <li class="devider"></li>
+              <li><a href="#">서비스 안내</a></li>
+              <li class="devider"></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li class="devider"></li>
+              <li><a href="#">책임의 한계와 법적고지</a></li>
+              <li class="devider"></li>
+              <li><a href="#">GSITM 고객센터</a></li>
+            </ul>
+            <p class="copyright">본 콘텐츠의 저작권은 제공처 또는 GSITM에게 있으며 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
